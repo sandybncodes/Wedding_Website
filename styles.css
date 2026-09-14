@@ -24,6 +24,7 @@ body {
     linear-gradient(180deg, #fffcf9 0%, var(--latte) 100%);
   color: var(--text);
   position: relative;
+  overflow-x: hidden;
 }
 
 body::before,
@@ -744,13 +745,42 @@ h3,
     background: rgba(111, 29, 45, 0.85);
     backdrop-filter: blur(8px);
     min-height: 74px;
+    overflow: hidden;
+  }
+
+  .navbar .container {
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    max-width: 100%;
   }
 
   .navbar-nav {
     background: transparent;
     border-radius: 0;
     border: none;
-    padding: 0;
+    padding: 0.35rem 0 0.1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.5rem;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.45rem 0.75rem;
+    white-space: normal;
+    line-height: 1.45;
+    letter-spacing: 0.06em;
   }
 
   .timeline::before {
